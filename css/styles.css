@@ -171,6 +171,7 @@ p{
 .tall-row {
     margin-top: 40px;
 }
+
 .modal {
     position: relative;
     top: auto;
@@ -179,4 +180,15 @@ p{
     bottom: auto;
     z-index: 1;
     display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .arte-imagem {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid #00ff00;
+  }
 }
