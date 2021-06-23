@@ -4,6 +4,6 @@
     <img alt="Cyber-Underground" title="Cyber-Underground" src="https://raw.githubusercontent.com/the-akira/Cyber-Underground/master/Avatar.png"> </br>
 </h1>
 
-<p align="center">
+<h2 align="center">
 	Filosofia & Arte
-</p>
+</h2>
