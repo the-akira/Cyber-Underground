@@ -1,9 +1,5 @@
-<h1 align="center">Cyber Underground</h1>
+# [Cyber Underground](https://cyberunderground.netlify.app)
 
-<h2 align="center">
-	Filosofia & Arte
-</h2>
+Filosofia & Arte
 
-<h1 align="center">
-    <a href="https://cyberunderground.netlify.app/"><img alt="Cyber-Underground" title="Cyber-Underground" src="https://raw.githubusercontent.com/the-akira/Cyber-Underground/master/Avatar.png"></a> </br>
-</h1>
+![img](https://raw.githubusercontent.com/the-akira/Cyber-Underground/master/Avatar.png)
