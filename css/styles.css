@@ -183,6 +183,13 @@ p {
     display: block;
 }
 
+@media screen and (max-width: 350px) {
+    .img-autor {
+        width: 86%;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .arte-imagem {
         width: 75%;
