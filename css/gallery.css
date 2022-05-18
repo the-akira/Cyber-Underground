@@ -24,6 +24,7 @@ body {
     background-color: black;
     opacity: 0.93;
     border: 1px solid #00ff00;
+    margin-bottom: 20px;
 }
 
 .tz-gallery .thumbnail {
