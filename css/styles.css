@@ -155,7 +155,7 @@ p {
     border: 4px solid #00ff00;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     .img-responsiva {
         display: block;
         margin-left: auto;
@@ -189,7 +189,7 @@ p {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .arte-imagem {
         width: 75%;
         height: auto;
