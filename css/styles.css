@@ -182,6 +182,10 @@ p {
     display: block;
 }
 
+.fab {
+    line-height: normal !important;
+}
+
 @media screen and (max-width: 350px) {
     .img-autor {
         width: 86%;
