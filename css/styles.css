@@ -86,6 +86,10 @@ blockquote {
     color: #9900e5;
 }
 
+.hacking, .hacking:hover {
+    color: #f200ff;
+}
+
 .matrix:hover {
     color: red;
 }
