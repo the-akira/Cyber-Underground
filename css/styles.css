@@ -165,16 +165,19 @@ p {
     border: 4px solid #00ff00;
 }
 
-@media (max-width: 850px) {
-    .img-responsiva {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.gallery-artwork {
+    border: 1.2px #00ff00 solid;    
+    margin-bottom: 30px;
+    max-width: 90%;
+    transition: transform 2s ease;
+}
 
-    .img-full {
-        display: none;
-    }
+.gallery-artwork:hover {
+    transform: scale(0.97);
+}
+
+.tz-gallery {
+    padding-bottom: 0px !important;
 }
 
 .tall-row {
@@ -203,6 +206,15 @@ p {
         margin-left: auto;
         margin-right: auto;
         border: 4px solid #00ff00;
+    }
+    .img-responsiva {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img-full {
+        display: none;
     }
 }
 
