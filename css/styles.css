@@ -74,20 +74,20 @@ blockquote {
     color: red;
 }
 
-.matrix {
+.matrix, .matrix:hover {
     color: red;
 }
 
-.manifesto {
-    color: #9900e5;
-}
-
-.manifesto:hover {
+.manifesto, .manifesto:hover {
     color: #9900e5;
 }
 
 .hacking, .hacking:hover {
     color: #f200ff;
+}
+
+.filosofias, .filosofias:hover {
+    color: #09cde3;
 }
 
 .matrix:hover {
