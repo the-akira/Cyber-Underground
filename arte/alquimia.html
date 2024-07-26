@@ -33,50 +33,51 @@
         <div class="text-center" style="margin-bottom: 25px">
             <a class="btn btn-lg btn-primary text-center" id="loadMore" role="button">Mais Imagens</a>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const gallery = document.getElementById('gallery');
-                const loadMoreBtn = document.getElementById('loadMore');
-                const totalImages = 201;
-                let loadedImages = 0;
-                const imagesPerLoad = 8; // Número de imagens a serem carregadas por vez
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const gallery = document.getElementById('gallery');
+            const loadMoreBtn = document.getElementById('loadMore');
+            const totalImages = 201;
+            let loadedImages = 0;
+            const imagesPerLoad = 8; // Número de imagens a serem carregadas por vez
 
-                // Função para criar os elementos de imagem
-                function createImageElement(src) {
-                    const div = document.createElement('div');
-                    const a = document.createElement('a');
-                    a.href = src;
-                    const img = document.createElement('img');
-                    img.src = src;
-                    img.alt = '';
-                    img.className = 'gallery-artwork';
-                    a.appendChild(img);
-                    div.appendChild(a);
-                    return div;
-                }
+            // Função para criar os elementos de imagem
+            function createImageElement(src) {
+                const div = document.createElement('div');
+                const a = document.createElement('a');
+                a.href = src;
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = '';
+                img.className = 'gallery-artwork';
+                a.appendChild(img);
+                div.appendChild(a);
+                return div;
+            }
 
-                // Função para carregar mais imagens
-                function loadImages() {
-                    for (let i = 0; i < imagesPerLoad; i++) {
-                        if (loadedImages >= totalImages) {
-                            loadMoreBtn.style.display = 'none';
-                            break;
-                        }
-                        const src = `alquimia/${loadedImages + 1}.jpg`;
-                        gallery.appendChild(createImageElement(src));
-                        loadedImages++;
+            // Função para carregar mais imagens
+            function loadImages() {
+                for (let i = 0; i < imagesPerLoad; i++) {
+                    if (loadedImages >= totalImages) {
+                        loadMoreBtn.style.display = 'none';
+                        break;
                     }
-                    baguetteBox.run('.tz-gallery');
+                    const src = `alquimia/${loadedImages + 1}.jpg`;
+                    gallery.appendChild(createImageElement(src));
+                    loadedImages++;
                 }
+                baguetteBox.run('.tz-gallery');
+            }
 
-                // Evento de clique no botão
-                loadMoreBtn.addEventListener('click', loadImages);
+            // Evento de clique no botão
+            loadMoreBtn.addEventListener('click', loadImages);
 
-                // Carregar as primeiras imagens na inicialização
-                loadImages();
-            });
-        </script>
+            // Carregar as primeiras imagens na inicialização
+            loadImages();
+        });
+    </script>
 </body>
 
 </html>

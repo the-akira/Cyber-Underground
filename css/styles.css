@@ -20,7 +20,7 @@ td {
     padding-right: 15px;
     padding-left: 15px;
     font-family: serif;
-    font-size: 2rem;
+    font-size: 2.35rem;
 }
 
 blockquote {
@@ -79,7 +79,7 @@ blockquote {
 }
 
 .manifesto, .manifesto:hover {
-    color: #9900e5;
+    color: #be3cfa;
 }
 
 .hacking, .hacking:hover {
@@ -90,8 +90,8 @@ blockquote {
     color: #09cde3;
 }
 
-.matrix:hover {
-    color: red;
+.secret, .secret:hover {
+    color: #ff8000;
 }
 
 .titulo-arte {
@@ -224,6 +224,13 @@ p {
     }
     .titulo-arte {
         font-size: 3.3rem !important;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .texto {
+        font-size: 2.1rem;
+        text-align: left;
     }
 }
 

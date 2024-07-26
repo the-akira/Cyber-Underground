@@ -170,11 +170,24 @@ a.article:hover {
     color: #00ff00 !important;
 }
 
+.img-text {
+    border: 1.2px #00ff00 solid;
+    width: 380px;    
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
 #content {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+}
+
+@media (max-width: 460px) {
+    .img-text {
+        width: 90%;    
+    }
 }
 
 @media (max-width: 768px) {
