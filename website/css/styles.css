@@ -78,8 +78,13 @@ blockquote {
     color: red;
 }
 
-.manifesto, .manifesto:hover {
+.manifesto {
     color: #be3cfa;
+}
+
+.manifesto:hover {
+    color: #00E600;
+    text-decoration: underline;
 }
 
 .hacking, .hacking:hover {
@@ -102,9 +107,16 @@ blockquote {
     margin-top: 7px;
 }
 
+.titulo-arte > a {
+    font-size: 3.7rem;
+    color: #0c0;
+}
+
 .btn-primary:focus {
     background-color: #00ff00 !important;
     color: black !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .well {
@@ -163,6 +175,11 @@ p {
     margin-left: auto;
     margin-right: auto;
     border: 4px solid #00ff00;
+    transition: transform 1.5s ease, filter 5s ease;
+}
+
+.arte-imagem:hover {
+    filter: saturate(3);
 }
 
 .gallery-artwork {
@@ -196,6 +213,26 @@ p {
 
 .fab, .fas {
     line-height: normal !important;
+}
+
+.btn-primary:hover {
+    background: #be3cfa; 
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #00ff00; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #be3cfa;
 }
 
 @media screen and (max-width: 850px) {
@@ -239,7 +276,13 @@ p {
         width: 85%;
     }
     .titulo {
-        font-size: 3rem;
+        font-size: 3.1rem;
+    }
+    .scientia {
+        font-size: 2.3rem;
+    }
+    .manifesto {
+        font-size: 2.1rem;
     }
 }
 
