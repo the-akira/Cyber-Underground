@@ -180,6 +180,7 @@ function moveSquare(e) {
             if (items.length === 0) {
                 gamePaused = true;
                 gameOverMessage = 'Vitória! Enter para retornar.';
+                stopTimer();
                 update();
             }
         }
@@ -199,6 +200,10 @@ function startTimer() {
         }
         update();
     }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timer);
 }
 
 function resetGame() {
