@@ -45,50 +45,67 @@
             </p>
         </div>
     </div>
+
+    <div class="col-md-12" style="margin-bottom: 20px;">
+        <div class="well text-center">
+            <img class="search-avatar" src="../imagens/icon5.jpeg">
+            <input type="text" id="search-bar" placeholder="Procurar história..." oninput="filterItems()">
+        </div>
+    </div>
+
     <div class="col-md-12">
-        <div class="well text-center" style="padding-bottom: 24px;">
+        <div class="well text-center item" style="padding-bottom: 24px;">
             <h1 class="titulo-arte">Guerilla Open Access Manifesto</h1>
             <img class="arte-imagem" src="imagens/manifesto.jpeg">
             <br>
             <a class="btn btn-lg btn-primary" href="manifesto/" role="button"><i class="fas fa-book fa-2x"></i></a>
         </div>
-        <br>
-        <div class="well text-center" style="padding-bottom: 24px;">
+        <div class="well text-center item" style="padding-bottom: 24px;">
             <h1 class="titulo-arte">O Sistema Matrix</h1>
             <img class="arte-imagem" src="imagens/matrix.jpeg">
             <br>
             <a class="btn btn-lg btn-primary" href="matrix/" role="button"><i class="fas fa-book fa-2x"></i></a>
         </div>
-        <br>
-        <div class="well text-center" style="padding-bottom: 24px;">
+        <div class="well text-center item" style="padding-bottom: 24px;">
             <h1 class="titulo-arte">Vigilância Absoluta</h1>
             <img class="arte-imagem" src="imagens/vigil.jpeg">
             <br>
             <a class="btn btn-lg btn-primary" href="secret/" role="button"><i class="fas fa-book fa-2x"></i></a>
         </div>
-        <br>
-        <div class="well text-center" style="padding-bottom: 24px;">
+        <div class="well text-center item" style="padding-bottom: 24px;">
             <h1 class="titulo-arte">Introdução ao Hacking</h1>
             <img class="arte-imagem" src="imagens/hacking.jpeg">
             <br>
             <a class="btn btn-lg btn-primary" href="hacking/" role="button"><i class="fas fa-book fa-2x"></i></a>
         </div>
-        <br>
-        <div class="well text-center" style="padding-bottom: 24px;">
+        <div class="well text-center item" style="padding-bottom: 24px;">
             <h1 class="titulo-arte">Os Três Mistérios da Realidade</h1>
             <img class="arte-imagem" src="imagens/trinity.jpeg">
             <br>
             <a class="btn btn-lg btn-primary" href="trinity/" role="button"><i class="fas fa-book fa-2x"></i></a>
         </div>
-        <br>
-        <div class="well text-center" style="padding-bottom: 24px;">
+        <div class="well text-center item" style="padding-bottom: 24px;">
             <h1 class="titulo-arte">A Câmara dos Mistérios</h1>
             <img class="arte-imagem" src="imagens/chamber.jpeg">
             <br>
             <a class="btn btn-lg btn-primary" href="mysteries/" role="button"><i class="fas fa-book fa-2x"></i></a>
         </div>
-        <br>
+        <div class="well text-center item" style="padding-bottom: 24px;">
+            <h1 class="titulo-arte">A Lenda de Hiram Abiff</h1>
+            <img class="arte-imagem" src="imagens/coffin.jpeg">
+            <br>
+            <a class="btn btn-lg btn-primary" href="hiram/" role="button"><i class="fas fa-book fa-2x"></i></a>
+        </div>
     </div>
+
+    <div class="col-md-12">
+        <div class="text-center" style="margin-bottom: 20px;">
+            <button class="btn btn-primary" onclick="previousPage()">Anterior</button>
+            <span id="page-info"></span>
+            <button class="btn btn-primary" onclick="nextPage()">Próxima</button>            
+        </div>
+    </div>
+
     <footer>
         <div class="col-md-12">
             <div class="foot well text-center" style="padding-bottom: 21.5px;">
@@ -97,6 +114,60 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const itemsPerPage = 5; // Número de itens por página
+        let currentPage = 1;
+        let allItems = Array.from(document.querySelectorAll('.item'));
+        let filteredItems = [...allItems]; // Inicialmente, todos os itens são filtrados como se fossem não filtrados
+        let totalItems = allItems.length;
+        let totalPages = Math.ceil(totalItems / itemsPerPage);
+
+        function showPage(page) {
+            // Use a lista filtrada para mostrar os itens
+            const itemsToShow = filteredItems.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+            allItems.forEach(item => item.style.display = 'none'); // Esconde todos os itens
+            itemsToShow.forEach(item => item.style.display = 'block'); // Mostra apenas os itens da página atual
+            //document.getElementById('page-info').textContent = `Página ${page} de ${totalPages}`;
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+                scrollToBottom();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+                scrollToBottom();
+            }
+        }
+
+        function scrollToBottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function filterItems() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            filteredItems = allItems.filter(item => 
+                item.querySelector('h1').innerText.toLowerCase().includes(searchTerm)
+            );
+            totalItems = filteredItems.length;
+            totalPages = Math.ceil(totalItems / itemsPerPage);
+            currentPage = 1;
+
+            showPage(currentPage);
+            //document.getElementById('page-info').textContent = `Página ${currentPage} de ${totalPages}`;
+            console.log(filteredItems);
+        }
+
+        // Exibição inicial
+        showPage(currentPage);
+    </script>
 </body>
 
 </html>
