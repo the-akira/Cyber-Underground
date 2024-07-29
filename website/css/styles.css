@@ -136,7 +136,6 @@ blockquote {
 }
 
 .img-autor {
-    height: 340px;
     width: 265px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -174,7 +173,7 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 4px solid #00ff00;
+    border: 2px solid #00ff00;
     transition: transform 1.5s ease, filter 5s ease;
 }
 
@@ -242,15 +241,19 @@ p {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        border: 4px solid #00ff00;
     }
     .img-responsiva {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-
     .img-full {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    #game {
         display: none;
     }
 }
@@ -290,5 +293,9 @@ p {
     .img-autor {
         width: 86%;
         height: auto;
+    }
+    .search-avatar {
+        width: 90% !important;
+        height: auto !important;
     }
 }

@@ -12,6 +12,37 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script src="https://kit.fontawesome.com/abb211c046.js"></script>
+    <style type="text/css">
+        .item {
+            margin-bottom: 20px;
+        }
+        #search-bar {
+            display: block;
+            margin: 0 auto;
+            background: black;
+            height: 50px;
+            border: 2px solid #be3cfa;
+            color: #00ff00 !important;
+            font-size: 3.5rem;
+            padding-left: 10px;
+            width: 90%;
+        }
+        #search-bar::placeholder {
+            color: #00ff00 !important;           
+        }
+        #search-bar:focus {
+            outline: none; 
+            box-shadow: none; 
+            border: 4px solid #be3cfa;
+        }
+        .search-avatar {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            border: 2px solid #00ff00;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,16 +53,27 @@
             <img class="img-fluid img-full" src="../imagens/cybermax.gif" alt="illuminati">
             <img class="img-fluid img-responsiva" src="../imagens/icon.png">
             <p class="scientia" style="margin-top: 19px;">"Scientia Potentia Est"</p>
-            <p style="font-size: 1.02rem;"><a class="manifesto" href="../matrix/"><b>O Sistema Matrix</b></a></p>
-            <p style="font-size: 1.02rem;"><a class="manifesto" href="../index.html"><b>Underground Index</b></a></p>
-            <p style="font-size: 1.02rem;"><a class="manifesto" href="../secret/"><b>Vigilância Absoluta</b></a></p>
-            <p style="font-size: 1.02rem;"><a class="manifesto" href="../hacking/"><b>Introdução ao Hacking</b></a></p>
-            <p style="font-size: 1.02rem;"><a class="manifesto" href="../manifesto/"><b>Guerilla Open Access Manifesto</b></a></p>
+            <p style="font-size: 1.02rem;">
+                <a class="manifesto" href="../index.html"><b>Index</b></a>
+            </p>
+            <p style="font-size: 1.02rem;">
+                <a class="manifesto" href="../arte/"><b>Obras de Arte</b></a>
+            </p>
+            <p style="font-size: 1.02rem;">
+                <a class="manifesto" href="../historias/"><b>Reflexões e Histórias</b></a>
+            </p>
         </div>
     </div>
-    </div>
-    <div class="col-md-12">
+
+    <div class="col-md-12" style="margin-bottom: 20px;">
         <div class="well text-center">
+            <img class="search-avatar" src="../imagens/icon4.jpeg">
+            <input type="text" id="search-bar" placeholder="Procurar autor..." oninput="filterItems()">
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel" target="_blank">
                     Georg Wilhelm F. Hegel
@@ -43,8 +85,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=10I_fa5iyefiT4rCveaZqh0ZrGGfZeCNO">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank">
                     Albert Einstein
@@ -56,8 +97,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1JgGlL8wiHfgx9p8ZqQrrQVebGKjTTqJ1">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Michel_Foucault" target="_blank">
                     Michel Foucault
@@ -69,8 +109,7 @@
             <p><strong>Idioma:</strong> Francês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1ayw0FBAgW2fF5WL_Ahz0W6zcW8HuLqNj">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Immanuel_Kant" target="_blank">
                     Immanuel Kant
@@ -82,8 +121,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1quO2xUI-nEOMa96totfcbqmq2YvJDZE3">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes" target="_blank">
                     René Descartes
@@ -95,8 +133,7 @@
             <p><strong>Idioma:</strong> Francês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=10k9ZYK06r2QO7stb6KJOUgh-Id5PijDb">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard" target="_blank">
                     Søren Aabye Kierkegaard
@@ -108,8 +145,7 @@
             <p><strong>Idioma:</strong> Dinamarquês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=18gCkkeCq7ZVa5FKW4Rs59C4smyhIAk_6">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Aldous_Huxley" target="_blank">
                     Aldous Huxley
@@ -121,8 +157,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1jw5f22_sO6qu5CwpRHJGR7HwBSlbFZa4">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/George_Orwell" target="_blank">
                     George Orwell
@@ -132,10 +167,21 @@
             <p><strong>Era:</strong> Século XX</p>
             <p><strong>Origem:</strong> Motihari</p>
             <p><strong>Idioma:</strong> Inglês</p>
-            <p><a class="btn btn-lg btn-primary" href="https://www.aerogrammestudio.com/2014/07/01/george-orwell-ebooks-collection/">Download</a></p>
+            <p><a class="btn btn-lg btn-primary" href="https://www.globalgreyebooks.com/george-orwell-books.html">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Bob_Marley" target="_blank">
+                    Bob Marley
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Bob_Marley.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Jamaica</p>
+            <p><strong>Idioma:</strong> Inglês</p>
+            <p><a class="btn btn-lg btn-primary" href="https://archive.org/details/bobmarleymyson0000book/mode/2up">Download</a></p>
+        </div>
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Aristotle" target="_blank">
                     Aristotle
@@ -147,8 +193,7 @@
             <p><strong>Idioma:</strong> Grego</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=19mNMXpe0ZWNd0mtpgJzH-nblG3ZA_aVd">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Plato" target="_blank">
                     Plato
@@ -160,8 +205,7 @@
             <p><strong>Idioma:</strong> Grego</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1lvDRTdK72z1RlclygwJRomYINYROGcQ0">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Socrates" target="_blank">
                     Socrates
@@ -173,8 +217,7 @@
             <p><strong>Idioma:</strong> Grego</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=17TEFKtM769X0RodcdCZXIMg_qE3nCPZy">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Pythagoras" target="_blank">
                     Pythagoras
@@ -186,10 +229,7 @@
             <p><strong>Idioma:</strong> Grego</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1fBZqmp7vXF90ZX-N_S2yBgFz6nzcSgHe">Download</a></p>
         </div>
-        <br>
-    </div>
-    <div class="col-md-12">
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Isaac_Newton" target="_blank">
                     Isaac Newton
@@ -201,8 +241,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1QLynXaIO3DgKfI9BPbRu7G1YS16sEUZl">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz" target="_blank">
                     Gottfried Wilhelm Leibniz
@@ -214,8 +253,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="http://www.earlymoderntexts.com/authors/leibniz">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Jeremy_Bentham" target="_blank">
                     Jeremy Bentham
@@ -227,8 +265,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1RMUy1xeLGELqb5pwbp_2MdX_1LkO090O">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Arthur_Schopenhauer" target="_blank">
                     Arthur Schopenhauer
@@ -240,8 +277,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1ltkMfSpRCVryfujn5Slz5QN3B7SrhYoq">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Karl_Marx" target="_blank">
                     Karl Marx
@@ -253,8 +289,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1RXJUlPNfTxfn6SDzx8YEt0_TlaqFsMsV">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Friedrich_Engels" target="_blank">
                     Friedrich Engels
@@ -266,8 +301,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=16-H1p5TFY04QEuYbLjNS9oy3a5buinB2">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Mikhail_Bakunin" target="_blank">
                     Mikhail Bakunin
@@ -279,8 +313,7 @@
             <p><strong>Idioma:</strong> Russo</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1OmQZZio5vseLIJLEbyvhJio_1a44uQ36">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Friedrich_Nietzsche" target="_blank">
                     Friedrich Nietzsche
@@ -292,51 +325,43 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1_dePmMdqmoeJRx1QyQpjj3rw_fF3SXXn">Download</a></p>
         </div>
-        <br>
-        <div class="col-md-12">
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Vladimir_Lenin" target="_blank">
-                        Vladimir I. Ulyanov Lenin
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Lenin.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Simbirsk, Russian Empire</p>
-                <p><strong>Idioma:</strong> Russo</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1mHTPHzlyLW6pJLRTeSHj3za-8w4jH6ZJ">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Fyodor_Dostoevsky" target="_blank">
-                        Fyodor Dostoevsky
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Fyodor_Dostoevsky.jpg">
-                <p><strong>Era:</strong> Século XIX</p>
-                <p><strong>Origem:</strong> Moscow</p>
-                <p><strong>Idioma:</strong> Russo</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=12PUo-OaR3QN5wLzfG6DUfltAwfVY_Lsv">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Leo_Tolstoy" target="_blank">
-                        Leo Tolstoy
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Leo_Tolstoy.jpg">
-                <p><strong>Era:</strong> Século XIX</p>
-                <p><strong>Origem:</strong> Tula, Russian Empire</p>
-                <p><strong>Idioma:</strong> Russo</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1V_QxTVijRkzhLEHKkRSmVOh5PkbwVytv">Download</a></p>
-            </div>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Vladimir_Lenin" target="_blank">
+                    Vladimir I. Ulyanov Lenin
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Lenin.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Simbirsk, Russian Empire</p>
+            <p><strong>Idioma:</strong> Russo</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1mHTPHzlyLW6pJLRTeSHj3za-8w4jH6ZJ">Download</a></p>
         </div>
-        <br>
-    </div>
-    <div class="col-md-12">
-        <div class="well text-center">
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Fyodor_Dostoevsky" target="_blank">
+                    Fyodor Dostoevsky
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Fyodor_Dostoevsky.jpg">
+            <p><strong>Era:</strong> Século XIX</p>
+            <p><strong>Origem:</strong> Moscow</p>
+            <p><strong>Idioma:</strong> Russo</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=12PUo-OaR3QN5wLzfG6DUfltAwfVY_Lsv">Download</a></p>
+        </div>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Leo_Tolstoy" target="_blank">
+                    Leo Tolstoy
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Leo_Tolstoy.jpg">
+            <p><strong>Era:</strong> Século XIX</p>
+            <p><strong>Origem:</strong> Tula, Russian Empire</p>
+            <p><strong>Idioma:</strong> Russo</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1V_QxTVijRkzhLEHKkRSmVOh5PkbwVytv">Download</a></p>
+        </div>
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank">
                     Carl Gustav Jung
@@ -348,8 +373,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1XV44pEm-vgHdQxd_3fQHOTtzpbxFhLYh">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Sigmund_Freud" target="_blank">
                     Sigmund Freud
@@ -361,8 +385,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1BWqONj_oaB5gldsBKG74ugvDZt3qUZyf">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Jean-Paul_Sartre" target="_blank">
                     Jean-Paul Sartre
@@ -374,8 +397,7 @@
             <p><strong>Idioma:</strong> Francês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1nmXZ3aworguNNvEuixf_VDbreJGeoGR2">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Henry_David_Thoreau" target="_blank">
                     Henry David Thoreau
@@ -387,8 +409,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1KdnFA7jaT8jNAry1ZuF9mWH6vraj2D0T">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Thomas_Aquinas" target="_blank">
                     Thomas Aquinas
@@ -400,8 +421,7 @@
             <p><strong>Idioma:</strong> Latim</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1YxpvQcVfRZa8lSjYHh-yiq0Onu8nyFu0">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Augustine_of_Hippo" target="_blank">
                     Augustine of Hippo
@@ -413,8 +433,7 @@
             <p><strong>Idioma:</strong> Latim</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1eUfbmxepdwMCSyqy0p95rpn2ajfjy0p0">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger" target="_blank">
                     Seneca
@@ -426,8 +445,7 @@
             <p><strong>Idioma:</strong> Latim</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1tONuQx72nWFjPq9w6q9cfySko-ECpqLf">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Marcus_Aurelius" target="_blank">
                     Marcus Aurelius
@@ -439,10 +457,7 @@
             <p><strong>Idioma:</strong> Latim</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=16KLx7XN3QmesTI8F-S6Se7pHgbyko17U">Download</a></p>
         </div>
-        <br>
-    </div>
-    <div class="col-md-12">
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/H._P._Lovecraft" target="_blank">
                     H. P. Lovecraft
@@ -454,8 +469,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1Xfg6nzlFaVHB0O4P7p1iYhH4R4KojGhu">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Helena_Blavatsky" target="_blank">
                     Helena P. Blavatsky
@@ -467,8 +481,7 @@
             <p><strong>Idioma:</strong> Russo</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1epVWBwb3hLsPbMaKpeuvulhg7k2ZDVpr">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Luk%C3%A1cs" target="_blank">
                     György Lukács
@@ -480,8 +493,7 @@
             <p><strong>Idioma:</strong> Húngaro</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1Il7gEHt-Kxz723yVYl0-FUC2Zy1ffzrX">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Francis_Bacon" target="_blank">
                     Francis Bacon
@@ -493,66 +505,55 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1A7x1Lq1069KlGTFxD1IG3pXUWIVhCR7D">Download</a></p>
         </div>
-        <br>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Max_Planck" target="_blank">
+                    Max Planck
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Max_Planck.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Kiel, Duchy of Holstein</p>
+            <p><strong>Idioma:</strong> Alemão</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1PO_kmhaapWngCJZd5ZpgQ5ZWyuEsSyYJ">Download</a></p>
         </div>
-        <div class="col-md-12">
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Max_Planck" target="_blank">
-                        Max Planck
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Max_Planck.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Kiel, Duchy of Holstein</p>
-                <p><strong>Idioma:</strong> Alemão</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1PO_kmhaapWngCJZd5ZpgQ5ZWyuEsSyYJ">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Werner_Heisenberg" target="_blank">
-                        Werner Heisenberg
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Werner_Heisenberg.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Würzburg, Kingdom of Bavaria</p>
-                <p><strong>Idioma:</strong> Alemão</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1MZVYVyVQL5ltkWDum-bCn6VSQfgICmu5">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger" target="_blank">
-                        Erwin Schrodinger
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Erwin_Schrodinger.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Vienna, Austria-Hungary</p>
-                <p><strong>Idioma:</strong> Alemão</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=12mKX-c81uLgbfSvmCeDDXjwZ8ZGALphN">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Niels_Bohr" target="_blank">
-                        Niels Henrik Bohr
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Niels_Bohr.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Copenhagen, Denmark</p>
-                <p><strong>Idioma:</strong> Dinamarquês</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=12v72wuFltyb2rWwa4mMaxeyvWtcF_2Lo">Download</a></p>
-            </div>
-            <br>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Werner_Heisenberg" target="_blank">
+                    Werner Heisenberg
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Werner_Heisenberg.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Würzburg, Kingdom of Bavaria</p>
+            <p><strong>Idioma:</strong> Alemão</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1MZVYVyVQL5ltkWDum-bCn6VSQfgICmu5">Download</a></p>
         </div>
-        <br>
-    </div>
-    <div class="col-md-12">
-        <div class="well text-center">
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger" target="_blank">
+                    Erwin Schrodinger
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Erwin_Schrodinger.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Vienna, Austria-Hungary</p>
+            <p><strong>Idioma:</strong> Alemão</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=12mKX-c81uLgbfSvmCeDDXjwZ8ZGALphN">Download</a></p>
+        </div>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Niels_Bohr" target="_blank">
+                    Niels Henrik Bohr
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Niels_Bohr.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Copenhagen, Denmark</p>
+            <p><strong>Idioma:</strong> Dinamarquês</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=12v72wuFltyb2rWwa4mMaxeyvWtcF_2Lo">Download</a></p>
+        </div>
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank">
                     Alan Turing
@@ -564,8 +565,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=10Xv3U5dkOuebdlwVwgxc3nHXKAcTZyA7">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/John_von_Neumann" target="_blank">
                     John von Neumann
@@ -577,8 +577,7 @@
             <p><strong>Idioma:</strong> Húngaro</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=10QBVm8KVFfeFE1gtYKTRXGgFdLpNPQaU">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/J._Robert_Oppenheimer" target="_blank">
                     Julius R. Oppenheimer
@@ -590,8 +589,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1PESeINoH14y7ONkrADGgFAkVv0XQSdhS">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Blaise_Pascal" target="_blank">
                     Blaise Pascal
@@ -603,65 +601,55 @@
             <p><strong>Idioma:</strong> Francês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1W0GBEXJHuv86bOhojaxVs1CCENGr3WU_">Download</a></p>
         </div>
-        <br>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Theodor_W._Adorno" target="_blank">
+                    Theodor W. Adorno
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Theodor_Adorno.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Frankfurt</p>
+            <p><strong>Idioma:</strong> Alemão</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=17i2-DCM116_--teBpW2vDDvdr7mxgnJ9">Download</a></p>
         </div>
-        <div class="col-md-12">
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Theodor_W._Adorno" target="_blank">
-                        Theodor W. Adorno
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Theodor_Adorno.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Frankfurt</p>
-                <p><strong>Idioma:</strong> Alemão</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=17i2-DCM116_--teBpW2vDDvdr7mxgnJ9">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Martin_Heidegger" target="_blank">
-                        Martin Heidegger
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Martin_Heidegger.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Meßkirch, Baden, German Empire</p>
-                <p><strong>Idioma:</strong> Alemão</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1GvaeNThMdpIT2kfmFARF56uzPV_i9E-W">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/J._R._R._Tolkien" target="_blank">
-                        J.R.R. Tolkien
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Tolkien.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Bloemfontein, Orange Free State</p>
-                <p><strong>Idioma:</strong> Inglês</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1qEOYhce-Gj3tlxAPoG8Vsm60H8mFITjp">Download</a></p>
-            </div>
-            <br>
-            <div class="well text-center">
-                <h1 class="titulo-arte">
-                    <a href="https://en.wikipedia.org/wiki/Herbert_Marcuse" target="_blank">
-                        Herbert Marcuse
-                    </a>
-                </h1>
-                <img class="img-autor" src="autores/Herbert_Marcuse.jpg">
-                <p><strong>Era:</strong> Século XX</p>
-                <p><strong>Origem:</strong> Berlin, German Empire</p>
-                <p><strong>Idioma:</strong> Alemão</p>
-                <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1jDSraVk7Lq0FZgBi9CGWO_XveEUI2A7P">Download</a></p>
-            </div>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Martin_Heidegger" target="_blank">
+                    Martin Heidegger
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Martin_Heidegger.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Meßkirch, Baden, German Empire</p>
+            <p><strong>Idioma:</strong> Alemão</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1GvaeNThMdpIT2kfmFARF56uzPV_i9E-W">Download</a></p>
         </div>
-        <br>
-    </div>
-    <div class="col-md-12">
-        <div class="well text-center">
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/J._R._R._Tolkien" target="_blank">
+                    J.R.R. Tolkien
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Tolkien.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Bloemfontein, Orange Free State</p>
+            <p><strong>Idioma:</strong> Inglês</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1qEOYhce-Gj3tlxAPoG8Vsm60H8mFITjp">Download</a></p>
+        </div>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Herbert_Marcuse" target="_blank">
+                    Herbert Marcuse
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/Herbert_Marcuse.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Berlin, German Empire</p>
+            <p><strong>Idioma:</strong> Alemão</p>
+            <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1jDSraVk7Lq0FZgBi9CGWO_XveEUI2A7P">Download</a></p>
+        </div>
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Karl_Popper" target="_blank">
                     Karl Popper
@@ -673,8 +661,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1guVUTYK1yjCLSL2CK7n2S4iVUavZEz50">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Kurt_G%C3%B6del" target="_blank">
                     Kurt Friedrich Gödel
@@ -686,8 +673,7 @@
             <p><strong>Idioma:</strong> Alemão</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1Ivw8fjjN9eKIiDfjfkiwMhLxETs748Ff">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Bertrand_Russell" target="_blank">
                     Bertrand Russell
@@ -699,8 +685,7 @@
             <p><strong>Idioma:</strong> Inglês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=1oFlADnQk_dU_BAyhXCz5rb5NICaWwzMq">Download</a></p>
         </div>
-        <br>
-        <div class="well text-center">
+        <div class="well text-center item">
             <h1 class="titulo-arte">
                 <a href="https://en.wikipedia.org/wiki/Ren%C3%A9_Gu%C3%A9non" target="_blank">
                     René Guénon
@@ -712,8 +697,28 @@
             <p><strong>Idioma:</strong> Francês</p>
             <p><a class="btn btn-lg btn-primary" href="https://drive.google.com/open?id=10ajLMzQrKHzqCVPJNxHPOkzQxhurLixN">Download</a></p>
         </div>
-        <br>
+        <div class="well text-center item">
+            <h1 class="titulo-arte">
+                <a href="https://en.wikipedia.org/wiki/Malcolm_X" target="_blank">
+                    Malcolm X
+                </a>
+            </h1>
+            <img class="img-autor" src="autores/MalcolmX.jpg">
+            <p><strong>Era:</strong> Século XX</p>
+            <p><strong>Origem:</strong> Africa-America</p>
+            <p><strong>Idioma:</strong> Inglês</p>
+            <p><a class="btn btn-lg btn-primary" href="https://ia903407.us.archive.org/12/items/the-autobiography-of-malcolm-x-as-told-to-alex-haley-malcolm-x-alex-haley-1992/0%20The%20autobiography%20of%20Malcolm%20X,%20as%20told%20to%20Alex%20Haley%20-%20Malcolm%20X,%20Alex%20Haley%20-%201992.pdf">Download</a></p>
+        </div>
     </div>
+
+    <div class="col-md-12">
+        <div class="text-center" style="margin-bottom: 20px;">
+            <button class="btn btn-primary" onclick="previousPage()">Anterior</button>
+            <span id="page-info"></span>
+            <button class="btn btn-primary" onclick="nextPage()">Próxima</button>            
+        </div>
+    </div>
+
     <footer>
         <div class="col-md-12">
             <div class="foot well text-center" style="padding-bottom: 21.5px;">
@@ -722,6 +727,61 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const itemsPerPage = 5; // Número de itens por página
+        let currentPage = 1;
+        let allItems = Array.from(document.querySelectorAll('.item'));
+        let filteredItems = [...allItems]; // Inicialmente, todos os itens são filtrados como se fossem não filtrados
+        let totalItems = allItems.length;
+        let totalPages = Math.ceil(totalItems / itemsPerPage);
+
+        function showPage(page) {
+            // Use a lista filtrada para mostrar os itens
+            const itemsToShow = filteredItems.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+            allItems.forEach(item => item.style.display = 'none'); // Esconde todos os itens
+            itemsToShow.forEach(item => item.style.display = 'block'); // Mostra apenas os itens da página atual
+            //document.getElementById('page-info').textContent = `Página ${page} de ${totalPages}`;
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+                scrollToBottom();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+                scrollToBottom();
+            }
+        }
+
+        function scrollToBottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function filterItems() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            filteredItems = allItems.filter(item => 
+                item.querySelector('h1 > a').innerText.toLowerCase().includes(searchTerm)
+            );
+            totalItems = filteredItems.length;
+            totalPages = Math.ceil(totalItems / itemsPerPage);
+            currentPage = 1;
+
+            showPage(currentPage);
+            //document.getElementById('page-info').textContent = `Página ${currentPage} de ${totalPages}`;
+            console.log(filteredItems);
+        }
+
+        // Exibição inicial
+        showPage(currentPage);
+    </script>
+
 </body>
 
 </html>
