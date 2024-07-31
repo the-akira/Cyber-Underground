@@ -25,7 +25,6 @@
         }
         #suggestions {
             list-style-type: none;
-            margin-top: 15px;
             font-size: 2.5rem;
         }
     </style>
@@ -193,6 +192,7 @@
         function showSuggestions(searchTerm) {
             suggestionsList.innerHTML = '';
             if (searchTerm) {
+                suggestionsList.style.marginTop = '16.5px';
                 const matches = allItems.filter(item => 
                     item.querySelector('h1').innerText.toLowerCase().includes(searchTerm)
                 ).map(item => item.querySelector('h1').innerText);
@@ -206,6 +206,8 @@
                     });
                     suggestionsList.appendChild(suggestionItem);
                 });
+            } else {
+                suggestionsList.style.marginTop = '0px';
             }
         }
 
