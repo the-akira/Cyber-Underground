@@ -145,7 +145,7 @@ function drawStartScreen() {
     ctx.font = '24px monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('Aperte Enter para Iniciar o Enigma', canvas.width / 2, canvas.height / 2);
+    ctx.fillText('Pressione Enter para Iniciar o Enigma', canvas.width / 2, canvas.height / 2);
 }
 
 function scrollToCanvas() {
