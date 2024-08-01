@@ -175,6 +175,11 @@ a.article:hover {
     width: 380px;    
     margin-bottom: 25px;
     margin-top: 5px;
+    transition: transform 1.5s ease, filter 5s ease;
+}
+
+.img-text:hover {
+    filter: saturate(3);
 }
 
 #content {
