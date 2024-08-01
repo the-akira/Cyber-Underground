@@ -18,6 +18,7 @@ const numItems = 10;
 let timeLeft = 80;
 let timer;
 let gamePaused = false;
+let gameStarted = false; // Variável para controlar o estado do jogo
 let gameOverMessage = '';
 
 // Labirinto
@@ -92,6 +93,7 @@ function drawGrid() {
 
 function drawMaze() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.height = 600;
     ctx.fillStyle = '#00E600';
     for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
@@ -124,6 +126,7 @@ function drawTimer() {
 
 function drawEndScreen(message) {
     canvas.style.border = 'none';
+    canvas.height = 100;
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, canvas.width, canvas.height); // Tela preta
     ctx.fillStyle = '#be3cfa'; // Cor da mensagem
@@ -133,8 +136,26 @@ function drawEndScreen(message) {
     ctx.fillText(message, canvas.width / 2, canvas.height / 2);
 }
 
+function drawStartScreen() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.height = 100;
+    ctx.fillStyle = '#080808';
+    ctx.fillRect(0, 0, canvas.width, canvas.height); // Tela preta
+    ctx.fillStyle = '#be3cfa'; // Cor da mensagem
+    ctx.font = '24px monospace';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('Aperte Enter para Iniciar o Enigma', canvas.width / 2, canvas.height / 2);
+}
+
+function scrollToCanvas() {
+    canvas.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function update() {
-    if (!gamePaused) {
+    if (!gameStarted) {
+        drawStartScreen();
+    } else if (!gamePaused) {
         drawMaze();
         drawGrid();
         drawItems();
@@ -146,6 +167,7 @@ function update() {
 }
 
 function moveSquare(e) {
+    if (!gameStarted) return; // Ignora a movimentação se o jogo não começou
     if (gamePaused) return; // Ignora a movimentação se o jogo estiver pausado
 
     e.preventDefault();
@@ -219,12 +241,18 @@ function resetGame() {
 }
 
 window.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && gamePaused) {
-        resetGame();
+    if (e.key === 'Enter') {
+        if (!gameStarted) {
+            gameStarted = true;
+            resetGame();
+            scrollToCanvas();
+        } else if (gamePaused) {
+            resetGame();
+        }
     } else {
         moveSquare(e);
     }
 });
 
-// Inicializa o jogo
-resetGame();
+// Inicializa a tela inicial
+update();
