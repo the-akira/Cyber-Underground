@@ -126,7 +126,7 @@ function drawTimer() {
 
 function drawEndScreen(message) {
     canvas.style.border = 'none';
-    canvas.height = 100;
+    canvas.height = 60;
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, canvas.width, canvas.height); // Tela preta
     ctx.fillStyle = '#be3cfa'; // Cor da mensagem
@@ -138,7 +138,7 @@ function drawEndScreen(message) {
 
 function drawStartScreen() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    canvas.height = 100;
+    canvas.height = 60;
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, canvas.width, canvas.height); // Tela preta
     ctx.fillStyle = '#be3cfa'; // Cor da mensagem
