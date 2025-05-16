@@ -2,4 +2,4 @@
 
 <img width="250" height="250" src="/website/imagens/icon.png"> 
 
-**Conhecimento** e **Arte** para todos!
+**Conhecimento** e **arte** para todos!
